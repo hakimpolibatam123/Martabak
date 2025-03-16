@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// web.php
+use App\Http\Controllers\ListItemController;
+
+Route::get('/list-item', [ListItemController::class, 'index'])->name('list-item');
